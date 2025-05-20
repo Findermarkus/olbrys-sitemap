@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Olbrys.de - Witamy!</title>
+  <title>Olbrys.de - Witamy</title>
   <meta name="robots" content="index, follow">
+
+  <!-- Preload kluczowych zasobów -->
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="main.js" as="script">
 
   <!-- Consent Mode 2.0 -->
   <script>
@@ -15,35 +19,36 @@
       'analytics_storage': 'denied'
     });
   </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6M4532Q3BR"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6M4S32Q8R2"></script>
   <script>
     gtag('js', new Date());
-    gtag('config', 'G-6M4532Q3BR');
+    gtag('config', 'G-6M4S32Q8R2');
   </script>
 </head>
 <body>
   <h1>Witaj na stronie Olbrys.de!</h1>
-  <p>Twoja strona działa poprawnie przez GitHub Pages 🎉</p>
-  <p>Mapa strony: <a href="/sitemap.xml">Zobacz sitemap.xml</a></p>
+  <p>Twoja strona działa poprawnie przez GitHub Pages 🚀</p>
+  <p>Mapa strony: <a href="sitemap.xml">Zobacz sitemap.xml</a></p>
 
-  <!-- Baner zgody -->
   <script>
     if (!localStorage.getItem('consent_given')) {
       var banner = document.createElement('div');
       banner.innerHTML = 'Używamy plików cookie do analityki i reklam. <button onclick="acceptConsent()">Akceptuję</button>';
       banner.style = 'position: fixed; bottom: 0; width: 100%; background: black; color: white; padding: 10px; text-align: center;';
       document.body.appendChild(banner);
+    }
 
-      window.acceptConsent = function() {
-        gtag('consent', 'update', {
-          'ad_storage': 'granted',
-          'analytics_storage': 'granted'
-        });
-        localStorage.setItem('consent_given', 'true');
-        banner.remove();
-      }
+    window.acceptConsent = function () {
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted'
+      });
+      localStorage.setItem('consent_given', 'true');
+      banner.remove();
     }
   </script>
 </body>
 </html>
+
 
