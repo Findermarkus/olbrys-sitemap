@@ -1,11 +1,10 @@
-
-</html>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Olbrys.de - Witamy!</title>
+  <meta name="robots" content="index, follow">
 
   <!-- Consent Mode 2.0 -->
   <script>
@@ -16,10 +15,10 @@
       'analytics_storage': 'denied'
     });
   </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6M4532Q3BRG"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6M4532Q3BR"></script>
   <script>
     gtag('js', new Date());
-    gtag('config', 'G-6M4532Q3BRG');
+    gtag('config', 'G-6M4532Q3BR');
   </script>
 </head>
 <body>
@@ -29,21 +28,22 @@
 
   <!-- Baner zgody -->
   <script>
-  if (!localStorage.getItem('consent_given')) {
-    var banner = document.createElement('div');
-    banner.innerHTML = 'Używamy plików cookie do analityki i reklam. <button onclick="acceptConsent()">Akceptuję</button>';
-    banner.style = 'position: fixed; bottom: 0; width: 100%; background: black; color: white; padding: 10px; text-align: center;';
-    document.body.appendChild(banner);
+    if (!localStorage.getItem('consent_given')) {
+      var banner = document.createElement('div');
+      banner.innerHTML = 'Używamy plików cookie do analityki i reklam. <button onclick="acceptConsent()">Akceptuję</button>';
+      banner.style = 'position: fixed; bottom: 0; width: 100%; background: black; color: white; padding: 10px; text-align: center;';
+      document.body.appendChild(banner);
 
-    window.acceptConsent = function() {
-      gtag('consent', 'update', {
-        'ad_storage': 'granted',
-        'analytics_storage': 'granted'
-      });
-      localStorage.setItem('consent_given', 'true');
-      banner.remove();
+      window.acceptConsent = function() {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted'
+        });
+        localStorage.setItem('consent_given', 'true');
+        banner.remove();
+      }
     }
-  }
   </script>
 </body>
 </html>
+
